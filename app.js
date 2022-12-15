@@ -17,11 +17,10 @@ $('#add').on( "change", function( event ) {
 
   $('i').on('click', (event)=>{
     $(event.target).parent().remove()
-  })
+  });
 
   $('#search').on('keyup', (event)=>{
     let valorDigitado = $(event.target).val().toLowerCase();
-    console.log(valorDigitado)
 
     
 
@@ -31,31 +30,22 @@ $('#add').on( "change", function( event ) {
       const textLi = htmlLi.textContent.toLowerCase()
 
       if(!textLi.includes(valorDigitado)){
-        console.log(htmlLi.classList.add('hidden'))
         htmlLi.classList.add('hidden')
         htmlLi.classList.remove('d-flex')
 
       }
 
       if(textLi.includes(valorDigitado)){
-        console.log(htmlLi.classList.add('hidden'))
         htmlLi.classList.add('d-flex')
         htmlLi.classList.remove('hidden')
 
       }
 
-     /* const liText = $('li').text().toLowerCase()
-
-      console.log(liText)
-
-      if(liText.includes(valorDigitado)){
-
-        $('ul')[item].hide()
-      } */
+     
     
     })
 
     
     
   
-  })
+  });
